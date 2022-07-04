@@ -1,11 +1,12 @@
 <div class="container mt-2">
     <h1>Listagem de Categorias</h1>
     <hr>
+    <a href="<?= base_url() . "?c=categoria&m=add"?>" class="btn btn-success">Inserir Categoria</a>
     <table class="table table-hover">
         <thead>
             <tr>
-                <th>Nome</th>
-                <th>Açôes</th>
+                <th class="col-10">Nome</th>
+                <th class="">Açôes</th>
             </tr>
         </thead>
         <tbody>
@@ -13,14 +14,12 @@
             <tr>
                 <td><?= $categoria['nome']?></td>
                 <td>
-                    <a href="http://"
-                    class="btn btn-danger">
-                    <i class="fa-solid fa-trash-can"></i>
+                    <a href="<?= base_url()?>?c=categoria&m=excluir&id=<?= $categoria['idcategoria']?>"
+                    class="btn btn-danger" title="excluir"> <i class="fa-solid fa-trash-can"></i>
                 </a>
 
                 <a href="http://"
-                    class="btn btn-primary title=editar">
-                    <i class="fa-solid fa-pencil"></i>
+                    class="btn btn-primary" title="atualizar"><i class="fa-solid fa-pencil"></i>
                 </a>
                 </td>
             </tr>

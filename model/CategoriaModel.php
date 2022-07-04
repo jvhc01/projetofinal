@@ -12,21 +12,21 @@
             $sql = "INSERT INTO categoria (nome) values (?)";
             $comando = $this->conexao->prepare($sql);
             $comando->bind_param("s", $nome);
-            return $comando->execute();
+            $comando->execute();
         }
 
         function excluir($id){
             $sql = "DELETE FROM categoria WHERE idcategoria = ?";
             $comando = $this->conexao->prepare($sql);
             $comando->bind_param("i", $id);
-            return $comando->execute();
+            $comando->execute();
         }
 
         function atualizar($nome, $id){
             $sql = "UPDATE categoria SET nome = ? WHERE idcategoria = ?";
             $comando = $this->conexao->prepare($sql);
             $comando->bind_param("si", $nome, $id);
-            return $comando->execute();
+            $comando->execute();
         }
 
         function buscarTodos(){
