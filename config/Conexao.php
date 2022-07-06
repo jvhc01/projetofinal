@@ -8,7 +8,7 @@ class Conexao{
   $port = "3306";
   $user = "root";
   $pass = "";
-  $db = "db_catalogo3e2";
+  $db = "db_catalogo3E2";
 
   if(!self::$con){
       //cria uma conexão com o banco de dados no mysql
