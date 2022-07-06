@@ -1,8 +1,8 @@
 <?php
 
-    $base_url = 'http://localhost/projeto_final/index.php';
+    $base_url = 'http://localhost/projeto_final/projetofinal/index.php';
     $controlador_padrao = "home";
-    if(isset($_GET['c'])){
+    
         $controller = ucfirst($_GET['c'] ?? $controlador_padrao);
         $path_controller = "controller/$controller.php";
 
@@ -23,7 +23,6 @@
                     //executa o método do controlador
                     call_user_func_array(array($obj, $metodo), array($id));
                 }
-        }
 
     }
 
